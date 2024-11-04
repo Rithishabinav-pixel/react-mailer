@@ -16,7 +16,7 @@ const EmailForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/send-email', formData);
+      const response = await axios.post('https://react-mailer-rithish.netlify.app//send-email', formData);
       console.log(response)
       alert('Email sent successfully');
       setFormData({ name: '', email: '', message: '' });
