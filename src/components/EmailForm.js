@@ -17,6 +17,7 @@ const EmailForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/send-email', formData);
+      console.log(response)
       alert('Email sent successfully');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
